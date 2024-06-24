@@ -11,7 +11,6 @@ import SwiftUI
 @main
 struct WBChatWidgetBundle: WidgetBundle {
     var body: some Widget {
-        WBChatWidget()
-        WBChatWidgetLiveActivity()
+        WBChat_Widget()
     }
 }
