@@ -17,7 +17,6 @@ enum Tabs: Hashable {
 final class Router: ObservableObject {
     
     @Published var selectedTab: Tabs = .contacts
-    //    @Environment(\.dismiss) var dismiss
     
     static let shared: Router = .init()
     

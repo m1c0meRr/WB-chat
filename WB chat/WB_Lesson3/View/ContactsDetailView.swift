@@ -80,6 +80,6 @@ struct ContactsDetailView: View {
 
 struct ContactsDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ContactsDetailView(contact: Contact(name: "Анастасия Иванова", initials: "АИ", isOnline: false, lastSeen: Date(timeIntervalSinceNow: -86400), avatar: nil, isHistory: true))
+        ContactsDetailView(contact: Contact(name: "Анастасия Иванова", initials: "АИ", isOnline: false, lastSeen: Date(timeIntervalSinceNow: -86400), avatar: "nastya", isHistory: true))
     }
 }

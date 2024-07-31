@@ -30,7 +30,7 @@ struct ChangeContactIntent: AppIntent {
     }
     
     func perform() async throws -> some IntentResult {
-        SharedData.shared.currentContactIndex = index
+        WidgetData.shared.currentContactIndex = index
 
         return .result()
     }

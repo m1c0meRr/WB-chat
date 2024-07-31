@@ -29,6 +29,7 @@ struct DetailViewController: View {
                 
                 TextField("Username", text: $username)
                     .font(.system(size: 40))
+                    .textFieldStyle(.roundedBorder)
                     .bold()
                 HStack {
                     Text("Notifications")

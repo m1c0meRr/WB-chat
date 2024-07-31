@@ -49,8 +49,6 @@ struct AvatarImageView: View {
                     )
                     .offset(x: 20, y: -23)
             }
-            
-            
         }
     }
     

@@ -12,7 +12,7 @@ struct WBChatWidgetView: View {
     var entry: Provider.Entry
 
     var body: some View {
-        GeometryReader { geo in
+        GeometryReader { geometry in
             VStack {
                 contactImageView
             
@@ -24,14 +24,14 @@ struct WBChatWidgetView: View {
                 HStack {
                     changeContactButton(imageName: "chevron.left",
                                         intentIndex: (entry.currentContactIndex - 1 + entry.contactToDisplay.count) % entry.contactToDisplay.count,
-                                        geo: geo
+                                        geometry: geometry
                     )
                     
                     Spacer()
                     
                     changeContactButton(imageName: "chevron.right",
                                         intentIndex: (entry.currentContactIndex + 1) % entry.contactToDisplay.count,
-                                        geo: geo
+                                        geometry: geometry
                     )
                 }
             }
@@ -52,24 +52,24 @@ extension WBChatWidgetView {
         case nil:
             Circle()
                 .frame(width: 64, height: 64)
-                .foregroundStyle(.orange)
-//                .overlay(
-//                    Text(entry.contactToDisplay[entry.currentContactIndex].name.initials)
-//                        .foregroundColor(.white)
-//                        .font(.system(size: 14, weight: .bold))
-//                )
+                .foregroundStyle(.purple)
+                .overlay(
+                    Text(entry.contactToDisplay[entry.currentContactIndex].initials)
+                        .foregroundColor(.white)
+                        .font(.system(size: 14, weight: .bold))
+                )
         }
     }
     
-    private func changeContactButton(imageName: String, intentIndex: Int, geo: GeometryProxy) -> some View {
+    private func changeContactButton(imageName: String, intentIndex: Int, geometry: GeometryProxy) -> some View {
         Button(intent: ChangeContactIntent(index: (intentIndex))) {
             Image(systemName: imageName)
-                .foregroundStyle(.red)
+                .foregroundStyle(.white)
         }
-        .frame(width: geo.size.width / 2 - 4, height: 30)
+        .frame(width: geometry.size.width / 2 - 4, height: 30)
         .background(
             Capsule()
-                .foregroundColor(.green)
+                .foregroundColor(.purple)
         )
         .buttonStyle(.plain)
     }
@@ -78,6 +78,6 @@ extension WBChatWidgetView {
 #Preview(as: .systemSmall) {
     WBChat_Widget()
 } timeline: {
-    WidgetEntry(contactToDisplay: Array(SharedData.shared.contacts), currentContactIndex: 0)
+    WidgetEntry(contactToDisplay: Array(WidgetData.shared.contacts), currentContactIndex: 4)
 }
 

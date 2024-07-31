@@ -16,13 +16,11 @@ struct ContactRow: View {
             AvatarImageView(avatar: contact.avatar, name: contact.name, isOnline: contact.isOnline, isHistory: contact.isHistory)
                 .padding(.trailing, 12)
             
-            
             VStack(spacing: 2) {
                 Text(contact.name)
                     .frame(width: 259,height: 24, alignment: .leading)
                 
                 Text(contact.isOnline ? "Online" : "Last seen \(timeManager(since: contact.lastSeen ?? Date.now))")
-                //                        .textStyle(with: .metadata1)
                     .foregroundColor(.gray)
                     .frame(width: 259,height: 26, alignment: .leading)
                 

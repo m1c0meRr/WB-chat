@@ -30,10 +30,8 @@ struct ContentView_TabView: View {
             }
             .tag(Tabs.still)
         }
-//        .shadow(color: .blue, radius: 10, x: 0, y: 4)
         .accentColor(.purple)
         .foregroundColor(.black)
-//        .navigationBarBackButtonHidden(true)
     }
 }
 

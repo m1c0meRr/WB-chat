@@ -32,7 +32,6 @@ struct Onboarding: View {
                 .padding(.bottom, 18)
 
                 Button(action: {
-//                    self.showNextView = true
                     self.showNextView.toggle()
                 }) {
                     Text("Начать общаться")
@@ -47,12 +46,6 @@ struct Onboarding: View {
                 .fullScreenCover(isPresented: $showNextView) {
                     ContentView_TabView()
                     }
-//                .sheet(isPresented: $showNextView) {
-//                    ContentView_TabView()
-//                    }
-//                .navigationDestination(isPresented: $showNextView) {
-//                    ContentView_TabView()
-//                }
             }
             .navigationBarHidden(true)
         }
