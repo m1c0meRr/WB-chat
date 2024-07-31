@@ -7,7 +7,7 @@
 //import SwiftUI
 //import Combine
 //
-//class ImageLoader {
+//class ImageLoader: ObservableObject {
 //    @Published var image: UIImage?
 //    private let url: URL
 //    private var cancellable: AnyCancellable?
@@ -27,15 +27,18 @@
 //    }
 //}
 //
-//struct Contact: Identifiable {
-//    let id = UUID()
-//    let name: String
-//    let avatarUrl: URL
-//}
-//
 //struct ContactRoww: View {
 //    let contact: Contact
-//    @StateObject var imageLoader = ImageLoader(url: URL(string: "https://example.com/avatar.jpg")!)
+//    @StateObject var imageLoader: ImageLoader
+//
+//    init(contact: Contact) {
+//        self.contact = contact
+//        if let avatar = contact.avatar {
+//            _imageLoader = StateObject(wrappedValue: ImageLoader(url: URL(string: "https://avatars.mds.yandex.net/i?id=9045280b715298fb7b72fa6d88fe92c6_l-4519035-images-thumbs&n=13")!))
+//        } else {
+//            _imageLoader = StateObject(wrappedValue: ImageLoader(url: URL(string: "https://example.com/default.jpg")!))
+//        }
+//    }
 //
 //    var body: some View {
 //        HStack {
@@ -47,21 +50,16 @@
 //            } else {
 //                ProgressView()
 //            }
-//            Text(contact.name)
+//            VStack(alignment: .leading) {
+//                Text(contact.name)
+//                    .font(.headline)
+//                Text(contact.initials)
+//                    .foregroundColor(.secondary)
+//            }
 //        }
 //    }
 //}
 //
-//struct ContactList: View {
-//    let contacts: [Contact] = [
-//        Contact(name: "John Doe", avatarUrl: URL(string: "https://example.com/john.jpg")!),
-//        Contact(name: "Jane Doe", avatarUrl: URL(string: "https://example.com/jane.jpg")!),
-//        // ...
-//    ]
-//
-//    var body: some View {
-//        List(contacts) { contact in
-//            ContactRow(contact: contact)
-//        }
-//    }
+//#Preview {
+//    ContactRoww(contact: Contact(name: "Анастасия Иванова", initials: "АИ", isOnline: false, lastSeen: Date(timeIntervalSinceNow: -86400), avatar: "nastya", isHistory: true))
 //}

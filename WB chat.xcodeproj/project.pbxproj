@@ -28,7 +28,9 @@
 		477961382C5A9DD100D049F9 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477961342C5A9DD100D049F9 /* CodeView.swift */; };
 		4779613B2C5AAD7100D049F9 /* UISystem in Frameworks */ = {isa = PBXBuildFile; productRef = 4779613A2C5AAD7100D049F9 /* UISystem */; };
 		4779613F2C5AAEDF00D049F9 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4779613E2C5AAEDE00D049F9 /* SearchBar.swift */; };
-		477961422C5AC04B00D049F9 /* ContactAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477961412C5AC04B00D049F9 /* ContactAsync.swift */; };
+		477961642C5AC84A00D049F9 /* ContactList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477961632C5AC84A00D049F9 /* ContactList.swift */; };
+		477961662C5ACD6A00D049F9 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477961652C5ACD6A00D049F9 /* ContactModel.swift */; };
+		477961682C5ACD8800D049F9 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477961672C5ACD8700D049F9 /* ImageLoader.swift */; };
 		477CD97E2C293CBD0068A1D2 /* WBChatWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477CD97A2C293A930068A1D2 /* WBChatWidgetView.swift */; };
 		477CD9822C293D730068A1D2 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477CD97C2C293C860068A1D2 /* Shared.swift */; };
 		477CD9832C293D810068A1D2 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477CD97C2C293C860068A1D2 /* Shared.swift */; };
@@ -112,7 +114,9 @@
 		477961342C5A9DD100D049F9 /* CodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		477961392C5AAA1900D049F9 /* UISystem */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UISystem; sourceTree = "<group>"; };
 		4779613E2C5AAEDE00D049F9 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
-		477961412C5AC04B00D049F9 /* ContactAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAsync.swift; sourceTree = "<group>"; };
+		477961632C5AC84A00D049F9 /* ContactList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactList.swift; sourceTree = "<group>"; };
+		477961652C5ACD6A00D049F9 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
+		477961672C5ACD8700D049F9 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		477CD97A2C293A930068A1D2 /* WBChatWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBChatWidgetView.swift; sourceTree = "<group>"; };
 		477CD97C2C293C860068A1D2 /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		47A472752C3690D300E08781 /* InfinityScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfinityScrollView.swift; sourceTree = "<group>"; };
@@ -320,7 +324,9 @@
 		477961402C5AC02D00D049F9 /* WB_Lesson15 */ = {
 			isa = PBXGroup;
 			children = (
-				477961412C5AC04B00D049F9 /* ContactAsync.swift */,
+				477961632C5AC84A00D049F9 /* ContactList.swift */,
+				477961652C5ACD6A00D049F9 /* ContactModel.swift */,
+				477961672C5ACD8700D049F9 /* ImageLoader.swift */,
 			);
 			path = WB_Lesson15;
 			sourceTree = "<group>";
@@ -550,12 +556,12 @@
 				47B382BE2C368C3300BF667F /* DetailViewController.swift in Sources */,
 				476473CC2C1472E30052EB45 /* ProfileScreen.swift in Sources */,
 				476473B82C1472630052EB45 /* ContentView.swift in Sources */,
+				477961662C5ACD6A00D049F9 /* ContactModel.swift in Sources */,
 				47B382C02C368C3300BF667F /* ProfileView.swift in Sources */,
 				476473C82C1472D70052EB45 /* MainScreen.swift in Sources */,
 				47BFB87C2C5028E900B926DD /* WeatherAPI.swift in Sources */,
 				477961352C5A9DD100D049F9 /* VerificationCodeView.swift in Sources */,
 				4747EE662C285B190036452C /* DatePickerView.swift in Sources */,
-				477961422C5AC04B00D049F9 /* ContactAsync.swift in Sources */,
 				47BFB8792C5028E900B926DD /* WeatherData.swift in Sources */,
 				477961372C5A9DD100D049F9 /* VerificationPromptView.swift in Sources */,
 				476473D42C1474200052EB45 /* ContactsDetailView.swift in Sources */,
@@ -572,6 +578,8 @@
 				476473DC2C15CF2C0052EB45 /* ContactRow.swift in Sources */,
 				477961382C5A9DD100D049F9 /* CodeView.swift in Sources */,
 				47AAB4AC2C57F1E900F23B84 /* VerificationNumber.swift in Sources */,
+				477961682C5ACD8800D049F9 /* ImageLoader.swift in Sources */,
+				477961642C5AC84A00D049F9 /* ContactList.swift in Sources */,
 				477961362C5A9DD100D049F9 /* CustomOperator%%.swift in Sources */,
 				47BFB87D2C5028E900B926DD /* WeatherViewModel.swift in Sources */,
 				47AAB4B62C57F55500F23B84 /* Emoji.swift in Sources */,

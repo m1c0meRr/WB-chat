@@ -22,7 +22,7 @@ struct ContentView_TabView: View {
                 Image(systemName: "person.2")
             }
             .tag(Tabs.contacts)
-            MainScreen().tabItem {
+            ContactList().tabItem {
                 Image(systemName: "message")
             }.tag(Tabs.chats)
             ProfileScreen().tabItem {
