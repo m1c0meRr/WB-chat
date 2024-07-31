@@ -7,14 +7,10 @@
 
 import SwiftUI
 
-public struct SearchBar: View {
+struct SearchBar: View {
     @Binding var searchText: String
     
-    public init(searchText: String) {
-        self.searchText = searchText
-    }
-    
-    public var body: some View {
+    var body: some View {
         TextField("Search", text: $searchText)
             .padding(40)
             .frame(height: 36)

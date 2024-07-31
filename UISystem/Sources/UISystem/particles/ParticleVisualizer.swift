@@ -7,11 +7,15 @@ The particle visualizer.
 
 import SwiftUI
 
-struct ParticleVisualizer: View {
+public struct ParticleVisualizer: View {
     var gradients: [Gradient]
     @StateObject private var model = ParticleModel()
 
-    var body: some View {
+    public init(gradients: [Gradient]) {
+        self.gradients = gradients
+    }
+    
+    public var body: some View {
         TimelineView(.animation) { timeline in
             Canvas { context, size in
                 let now = timeline.date.timeIntervalSinceReferenceDate
